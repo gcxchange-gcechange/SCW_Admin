@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "scw-admin-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/scwAdmin/ScwAdminWebPart.js",
+          "manifest": "./src/webparts/scwAdmin/ScwAdminWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ScwAdminWebPartStrings": "lib/webparts/scwAdmin/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
