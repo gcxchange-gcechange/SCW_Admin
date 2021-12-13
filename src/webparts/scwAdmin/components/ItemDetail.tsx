@@ -42,17 +42,17 @@ export default class ItemDetail extends React.Component<IItemDetailProps, IItemD
                         <br />
                         <br />
 
-                        <TextField label="Space Name" readOnly defaultValue={this.props.spaceName} />
+                        <TextField label="Space Name" readOnly defaultValue={this.props.spaceName} errorMessage={!this.props.spaceName && 'Empty Field'} />
                         <br />
-                        <TextField label="Space Description (EN)" multiline rows={5} readOnly defaultValue={this.props.descriptionEn} />
+                        <TextField label="Space Description (EN)" multiline rows={5} readOnly defaultValue={this.props.descriptionEn} errorMessage={!this.props.descriptionEn && 'Empty Field'} />
                         <br />
-                        <TextField label="Space Description (FR)" readOnly multiline rows={5} defaultValue={this.props.descriptionFR} />
+                        <TextField label="Space Description (FR)" readOnly multiline rows={5} defaultValue={this.props.descriptionFR} errorMessage={!this.props.descriptionFR && 'Empty Field'} />
                         <br />
-                        <TextField label="Team Purpose and Content" readOnly multiline rows={3} defaultValue={this.props.reason} />
+                        <TextField label="Team Purpose and Content" readOnly multiline rows={3} defaultValue={this.props.reason} errorMessage={!this.props.reason && 'Empty Field'} />
                         <br />
-                        <TextField label="SharePoint Site Url" readOnly multiline rows={1} defaultValue={this.props.url} />
+                        <TextField label="SharePoint Site Url" readOnly multiline rows={1} defaultValue={this.props.url}  errorMessage={!this.props.url && 'Empty Field'} />
                         <br />
-                        <TextField label="Requester Email" readOnly multiline rows={1} defaultValue={this.props.requesterEmail} />
+                        <TextField label="Requester Email" readOnly multiline rows={1} defaultValue={this.props.requesterEmail} errorMessage={!this.props.requesterEmail && 'Empty Field'} />
                         <br />
 
                         <PeoplePicker
@@ -67,7 +67,7 @@ export default class ItemDetail extends React.Component<IItemDetailProps, IItemD
                         <br />
                         {this.props.itemStatus == 'Submitted' &&
                             <Stack horizontal verticalAlign="center" horizontalAlign="center">
-                                <PrimaryButton text="Approve" style={{ marginRight: "20px" }} onClick={this._btnApproveClicked} allowDisabledFocus />
+                                <PrimaryButton text="Approve" style={{ marginRight: "20px" }} onClick={this._btnApproveClicked} allowDisabledFocus disabled={!this.props.descriptionEn || !this.props.spaceName || !this.props.descriptionFR || !this.props.reason || !this.props.url || !this.props.requesterEmail} />
                                 <PrimaryButton text="Reject" onClick={this._btnRejectClicked} allowDisabledFocus />
                             </Stack>
                         }
