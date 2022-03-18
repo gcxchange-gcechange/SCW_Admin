@@ -209,7 +209,7 @@ export default class ItemDetail extends React.Component<IItemDetailProps, IItemD
                 {
                     "name": "${this.props.spaceName}",
                     "description": "${this.props.descriptionEn}-${this.props.descriptionFR}" ,
-                    "mailNickname": "${this.props.url.substring(39)}",
+                    "mailNickname": "${this.props.url.substring(36)}",
                     "itemId": "${this.props.itemId}",
                     "emails": "${this.props.owners.toString()}",
                     "requesterName": "${this.props.requesterName}",
