@@ -13,7 +13,29 @@
       "privacyUrl": "",
       "termsOfUseUrl": "",
       "mpnId": ""
-    }
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "scw-admin description"
+      },
+      "longDescription": {
+        "default": "scw-admin description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "scw-admin ScwAdminWebPart Feature",
+        "description": "The feature that activates ScwAdminWebPart from the scw-admin solution.",
+        "id": "da455349-8154-4d13-8a86-d73dd98c3496",
+        "version": "1.0.0.0",
+        "componentIds": [
+          "da455349-8154-4d13-8a86-d73dd98c3496"
+        ]
+      }
+    ]
   },
 
   "paths": {

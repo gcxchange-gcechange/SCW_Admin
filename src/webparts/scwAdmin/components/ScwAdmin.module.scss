@@ -1,23 +1,23 @@
-@import '~office-ui-fabric-react/dist/sass/References.scss';
 @import '~office-ui-fabric-core/dist/sass/References.scss';
+@import '~@fluentui/react/dist/sass/References.scss';
 
 .scwAdmin {
   .headerClass span {
     /* bolder font */
     font-weight: 600;
     font-size: 14px;
- 
+
     /* Right Align the column header */
     justify-content: left;
     text-align: left;
- 
+
     /* green color */
     @include ms-fontColor-neutralPrimary;
- 
+
     /* background color */
    // background-color:$ms-color-gray40;
-    
-    
+
+
  }
 
  .newHeaderLinkStyle {
@@ -29,7 +29,7 @@
 
   .container {
     max-width: 1440px;
-    
+
     margin: 0px auto;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
   }

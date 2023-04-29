@@ -7,4 +7,13 @@ build.addSuppression(`Warning - tslint - src/webparts/scwAdmin/components/ScwAdm
 build.addSuppression(`Warning - tslint - src/webparts/scwAdmin/components/ScwAdmin.tsx(393,21): error no-function-expression: Use arrow function instead of function expression`);
 build.addSuppression(`Warning - tslint - src/webparts/scwAdmin/components/ScwAdmin.tsx(393,555): error no-function-expression: Use arrow function instead of function expression`);
 
+var getTasks = build.rig.getTasks;
+build.rig.getTasks = function () {
+  var result = getTasks.call(build.rig);
+
+  result.set('serve', result.get('serve-deprecated'));
+
+  return result;
+};
+
 build.initialize(require('gulp'));

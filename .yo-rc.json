@@ -1,8 +1,12 @@
 {
   "@microsoft/generator-sharepoint": {
+    "nodeVersion": "16.14.0",
+    "sdkVersions": {
+      "@microsoft/teams-js": "2.9.1"
+    },
     "isCreatingSolution": true,
     "environment": "spo",
-    "version": "1.11.0",
+    "version": "1.17.1",
     "libraryName": "SCW Approvals",
     "libraryId": "c67f3e05-8efd-49bf-b7f1-d77f2d2b609b",
     "packageManager": "npm",
